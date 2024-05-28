@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Enforcement Report</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container" style="display:none;">
+        <div class="tablet-frame">
+            <div class="loading-overlay" id="loading-overlay">
+                <div class="spinner">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="tabs">
+                <button class="tab-button" data-tab="incident-report">Incident Report</button>
+                <button class="tab-button" data-tab="vehicle-report">Vehicle Report</button>
+                <button class="tab-button" data-tab="scene-report">Scene Report</button>
+                <button class="tab-button" data-tab="warrant-request">Warrant Request</button>
+            </div>
+            <div class="selected-department" id="selected-department">No Department Selected</div>
+            <div class="wrapper" align="center">
+                <label class="option">
+                    <input type="radio" name="department" class="input" value="BCSO">
+                    <div class="btn"><span class="span">BCSO</span></div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="department" class="input" value="ASP">
+                    <div class="btn"><span class="span">ASP</span></div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="department" class="input" value="SPD">
+                    <div class="btn"><span class="span">SPD</span></div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="department" class="input" value="DNR">
+                    <div class="btn"><span class="span">DNR</span></div>
+                </label>
+
+            </div>
+            <div class="tab-content" id="incident-report">
+                <h2>Officer Incident Report</h2>
+                <div class="form-group">
+                    <label for="incident-date">Date:</label>
+                    <input type="date" id="incident-date" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="incident-officer">Officer:</label>
+                    <input type="text" id="incident-officer" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="incident-details">Details:</label>
+                    <textarea id="incident-details" class="textInput"></textarea>
+                </div>
+            </div>
+            <div class="tab-content" id="vehicle-report">
+                <h2>Vehicle Damage / Accident Report</h2>
+                <div class="form-group">
+                    <label for="vehicle-date">Date:</label>
+                    <input type="date" id="vehicle-date" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="vehicle-officer">Officer:</label>
+                    <input type="text" id="vehicle-officer" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="vehicle-description">Description:</label>
+                    <textarea id="vehicle-description" class="textInput"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="vehicle-damage">Damage:</label>
+                    <textarea id="vehicle-damage" class="textInput"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="vehicle-cause">Cause:</label>
+                    <textarea id="vehicle-cause" class="textInput"></textarea>
+                </div>
+            </div>
+            <div class="tab-content" id="scene-report">
+                <h2>Scene Report</h2>
+                <div class="form-group">
+                    <label for="scene-date">Date:</label>
+                    <input type="date" id="scene-date" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="scene-officer">Officer:</label>
+                    <input type="text" id="scene-officer" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="scene-location">Location:</label>
+                    <input type="text" id="scene-location" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="scene-description">Description:</label>
+                    <textarea id="scene-description" class="textInput"></textarea>
+                </div>
+            </div>
+            <div class="tab-content" id="warrant-request">
+                <h2>Warrant Request</h2>
+                <div class="form-group">
+                    <label for="warrant-date">Date:</label>
+                    <input type="date" id="warrant-date" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="warrant-officer">Officer:</label>
+                    <input type="text" id="warrant-officer" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="warrant-suspect">Suspect:</label>
+                    <input type="text" id="warrant-suspect" class="textInput">
+                </div>
+                <div class="form-group">
+                    <label for="warrant-reason">Reason:</label>
+                    <textarea id="warrant-reason" class="textInput"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button id="submit">Submit</button>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
